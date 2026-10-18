@@ -5,10 +5,10 @@ Locus 是一款免费、开源的 iPhone 模拟定位应用。你可以在地图
 [English](README.md)
 
 <p align="center">
-  <img src="docs/screenshots/map.png" alt="Locus 地图与标记" width="180" />
-  <img src="docs/screenshots/spoofing.png" alt="Locus 模拟定位" width="180" />
-  <img src="docs/screenshots/joystick.png" alt="Locus 摇杆" width="180" />
-  <img src="docs/screenshots/route.png" alt="Locus 路线" width="180" />
+  <img src="docs/screenshots/zh-CN/settings.jpg" alt="Locus 地图与标记" width="180" />
+  <img src="docs/screenshots/zh-CN/spoofing.jpg" alt="Locus 模拟定位" width="180" />
+  <img src="docs/screenshots/zh-CN/joystick.jpg" alt="Locus 摇杆" width="180" />
+  <img src="docs/screenshots/zh-CN/route.jpg" alt="Locus 路线" width="180" />
 </p>
 
 ## 功能
