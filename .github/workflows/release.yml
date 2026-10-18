@@ -1,9 +1,8 @@
 name: Build and publish IPA
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [published]
 
 permissions:
   contents: write
@@ -39,12 +38,11 @@ jobs:
           cp -R "$RUNNER_TEMP/Locus.xcarchive/Products/Applications/Locus.app" "$RUNNER_TEMP/ipa/Payload/"
           ditto -c -k --sequesterRsrc --keepParent "$RUNNER_TEMP/ipa/Payload" "$RUNNER_TEMP/Locus-$version.ipa"
 
-      - name: Publish GitHub Release
+      - name: Upload IPA to GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="${GITHUB_REF_NAME#v}"
-          gh release create "$GITHUB_REF_NAME" \
+          gh release upload "$GITHUB_REF_NAME" \
             "$RUNNER_TEMP/Locus-$version.ipa" \
-            --title "Locus $version" \
-            --generate-notes
+            --clobber
